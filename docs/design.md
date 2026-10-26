@@ -47,9 +47,9 @@ Nothing web-facing outruns authentication.
 | Phase | Scope | State |
 |---|---|---|
 | A — Windows correctness and security | Per-op elevation; driver state read from the driver store (not the staged file); loopback-only bind; DNS-rebinding `Host` guard; elevated-op result channel | Done |
-| B — Single binary | Replace Electron with one Go binary embedding a light webview (e.g. Wails) and running the API in-process; drops the sidecar executable and the spawn-and-health-poll lifecycle. Lands together with the Linux backend. | Planned |
+| B — Single binary | Replace Electron with one Go binary embedding a light webview (e.g. Wails) and running the API in-process; drops the sidecar executable and the spawn-and-health-poll lifecycle. | Planned |
 | C — Authentication (hard gate before any remote surface) | Per-run local token → local accounts and SSO/OIDC → TLS, every API endpoint protected, and a consent model for remotely requested elevated operations | Planned |
-| D — Linux backend | A "dummy plug" virtual display behind the same `Backend` interface (evdi, DRM virtual connector, or Xorg dummy driver). CLI-first and headless; GUI optional. | Planned |
+| D — Linux control (optional) | Windows is the target; this need not land. If it does: control a headless Linux instance's displays with the same commands and API as on Windows, behind the same `Backend` interface. Linux creates displays in software (the display server), so this drives that configuration; it never ships a display driver. | Optional |
 | E — Tests | Test harness, pure-logic tests (argument quoting, the `__elevated-op` allowlist), `go test` in CI; remove the stale `isAdmin: true` the desktop shell reports now that the backend runs unelevated | Planned |
 
 ## Security invariants
