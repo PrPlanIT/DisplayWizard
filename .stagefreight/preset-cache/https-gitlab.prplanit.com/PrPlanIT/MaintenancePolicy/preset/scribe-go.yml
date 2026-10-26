@@ -1,0 +1,21 @@
+# Scribe rows for a Go repo: project + status (with the Go version badge).
+scribe:
+  files:
+    readme.project:
+      file: README.md
+      between: ["<!-- sf:project:start -->", "<!-- sf:project:end -->"]
+      inline: true
+      items: [repo-gh, repo-gl, license, issues, prs, contributors, donate, sponsor]
+    readme.badges:
+      file: README.md
+      between: ["<!-- sf:badges:start -->", "<!-- sf:badges:end -->"]
+      inline: true
+      items: [release, build, go-version, go-reference, last-commit, stagefreight]
+  commit:
+    type: docs
+    message: "refresh generated badges"
+    add:
+      - README.md
+      - ".stagefreight/scribe"
+    push: true
+    skip_ci: true

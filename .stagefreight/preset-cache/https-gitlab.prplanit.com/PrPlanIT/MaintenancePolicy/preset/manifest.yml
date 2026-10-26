@@ -1,0 +1,3 @@
+manifest:
+  enabled: true
+  mode: workspace

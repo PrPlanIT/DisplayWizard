@@ -1,0 +1,4 @@
+commit:
+  default_type: chore
+  conventional: true
+  backend: git

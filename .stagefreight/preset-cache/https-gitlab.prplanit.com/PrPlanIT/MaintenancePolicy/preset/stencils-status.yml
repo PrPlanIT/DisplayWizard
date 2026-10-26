@@ -1,0 +1,4 @@
+# Status set for a repo that BUILDS/RELEASES an artifact — compose after stencils-base.yml.
+stencils:
+  release: { label: release, message: "v{base}", color: "#74ecbe", font: dejavu-sans, font_size: 11, link: "https://github.com/{path.github}/releases" }
+  build:   { label: build, message: "{env:BUILD_STATUS}", color: auto, font: monofur, link: "https://gitlab.prplanit.com/{path.gitlab}/-/pipelines" }

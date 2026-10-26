@@ -1,0 +1,4 @@
+# Go repos: govulncheck adds call-graph reachability to vulnerability findings.
+toolchains:
+  want:
+    govulncheck: "x"

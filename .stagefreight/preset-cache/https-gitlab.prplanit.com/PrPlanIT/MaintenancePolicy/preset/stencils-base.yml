@@ -1,0 +1,15 @@
+# Base badge stencils — identity + social, shared by EVERY repo type. Coordinates are
+# facts: {path.<forge>} (forge default_path), {org.<surface>} (org aliases),
+# {metadata.license}, {stagefreight.version}. Compose with a status set (stencils-status
+# for build/release repos, stencils-pipeline for CI-only repos) + optional go/docker.
+stencils:
+  repo-gl:      { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://gitlab.prplanit.com/{path.gitlab}" }
+  repo-gh:      { render: shield, label: GitHub, message: mirror, color: "#181717", logo: github, link: "https://github.com/{path.github}" }
+  license:      { label: license, message: "{metadata.license}", color: "#310937", font: monofur, link: LICENSE }
+  issues:       { type: github-issues-open }
+  prs:          { type: github-prs-open }
+  contributors: { type: github-contributors }
+  donate:       { render: shield, message: donate,  color: "#FF5E5B", logo: ko-fi,          logo_color: white, link: "https://ko-fi.com/T6T41IT163" }
+  sponsor:      { render: shield, message: sponsor, color: "#EA4AAA", logo: githubsponsors, logo_color: white, link: "https://github.com/sponsors/{org.github}" }
+  last-commit:  { type: github-last-commit }
+  stagefreight: { render: shield, label: StageFreight, message: "{stagefreight.version}", color: "#310937", logo: readthedocs, logo_color: white, link: "https://stagefreight.prplanit.com" }

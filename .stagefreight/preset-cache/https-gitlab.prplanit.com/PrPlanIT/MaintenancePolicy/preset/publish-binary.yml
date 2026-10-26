@@ -1,0 +1,70 @@
+# publish — binary-only bucket. Same release lifecycle as publish-docker-binary.yml with
+# every registry target removed: a repo here ships archives, not an image. Kept as its
+# own file rather than a per-repo override because "no registry" is a policy, and a
+# config: override replaces a whole section, so subtracting targets that way would mean
+# restating the ones that remain in every repo that does it.
+publish:
+  # The dev channel: a rolling archive that the dev-release points at, so `latest-dev`
+  # always resolves to the current main build.
+  binaries-dev:
+    kind: binary-archive
+    build: bin
+    name: "{slug}-latest-dev-{os}-{arch}"
+    format: auto
+    checksums: true
+    when: { branches: [main], events: [push, manual] }
+
+  binaries:
+    kind: binary-archive
+    build: bin
+    name: "{slug}-{version}-{os}-{arch}"
+    format: auto
+    checksums: true
+    include: ["README.md", "LICENSE"]
+    when:
+      - { git_tags: [stable], events: [tag] }
+      # Without this a prerelease tag produced no archive at all, so there was
+      # nothing for a release to attach to even once one existed.
+      - { git_tags: [prerelease], events: [tag] }
+
+  project-metadata:
+    kind: metadata
+    repos: [primary, github-mirror]
+    readme: README.md
+    when: { branches: [main], events: [push, tag] }
+
+  release:
+    kind: release
+    security_summary: true
+    registry_links: true
+    type: latest
+    repos: [primary]
+    archives: binaries
+    aliases: ["v{version}", "latest"]
+    when: { git_tags: [stable], events: [tag] }
+
+  prerelease-release:
+    # An -rc tag is a release candidate: it should be reachable from the repo like
+    # any other, marked prerelease so it does not displace the latest stable one,
+    # and without the "latest" alias for the same reason. Pages are deliberately
+    # absent — a candidate must not overwrite the published documentation site.
+    kind: release
+    security_summary: true
+    registry_links: true
+    repos: [primary]
+    archives: binaries
+    type: prerelease
+    when: { git_tags: [prerelease], events: [tag] }
+
+  dev-release:
+    kind: release
+    security_summary: true
+    registry_links: true
+    type: prerelease
+    repos: [primary]
+    archives: binaries-dev
+    tag: "dev-{sha:8}"
+    aliases: ["latest-dev"]
+    when: { branches: [main], events: [push, manual] }
+    retention:
+      keep_last: 2

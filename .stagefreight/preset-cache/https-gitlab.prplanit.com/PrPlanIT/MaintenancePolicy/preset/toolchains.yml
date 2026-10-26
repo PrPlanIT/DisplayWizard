@@ -1,0 +1,7 @@
+# Toolchain policy for every repo: updates on, paced by dependency.min_release_age, and
+# the shared runner cache's retention. Which tools a repo runs is composed separately,
+# per repo type, under want: presets: (toolchains-*.yml).
+toolchains:
+  update: true
+  retention:
+    keep_last: 3

@@ -1,0 +1,9 @@
+# The scanners and signer every repo runs (security review, SBOM, signing), tracking
+# their newest release.
+toolchains:
+  want:
+    trivy: "x"
+    syft: "x"
+    grype: "x"
+    osv-scanner: "x"
+    cosign: "x"

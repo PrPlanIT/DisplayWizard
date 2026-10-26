@@ -1,0 +1,15 @@
+dependency:
+  enabled: true
+  output: .stagefreight/deps
+  # Best-of-breed safety dials (from hasteward): only auto-adopt patch bumps, and wait
+  # 7 days before pulling a fresh release (dodges freshly-published supply-chain risk).
+  max_update: patch
+  min_release_age: 7d
+  scope:
+    dockerfile_env: true
+  commit:
+    enabled: true
+    type: chore
+    message: update managed dependencies
+    push: true
+    skip_ci: false

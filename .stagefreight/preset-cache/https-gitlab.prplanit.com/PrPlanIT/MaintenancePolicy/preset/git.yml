@@ -1,0 +1,17 @@
+git:
+  branches:
+    main: ^main$
+  tags:
+    stable:
+      pattern: ^v?\d+\.\d+\.\d+$
+    prerelease:
+      pattern: ^v?\d+\.\d+\.\d+-.+
+  versioning:
+    branch_builds:
+      default:
+        base_from:
+        - stable
+        format: '{base}-dev+{sha}'
+    no_lineage:
+      mode: explicit
+      version: 0.0.0-dev+{sha}

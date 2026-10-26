@@ -1,0 +1,41 @@
+lint:
+  level: full
+  exclude:
+    - "*.ttf"
+    - "*.png"
+    - "*.jpg"
+    - "*.ico"
+    - "*.woff"
+    - "*.woff2"
+  modules:
+    freshness:
+      enabled: true
+      cache_ttl: 300
+      sources:
+        docker_images: true
+        github_releases: true
+        go_modules: true
+      vulnerability:
+        enabled: true
+    tabs:
+      enabled: true
+    # House-style policy (default-off globally): StageFreight values output indirection
+    # through the diag/renderer boundary, so it enables direct-output on ITS OWN source.
+    direct-output:
+      enabled: true
+    secrets:
+      enabled: true
+      exclude:
+        - "go.sum"
+    conflicts:
+      enabled: true
+    filesize:
+      enabled: true
+    unicode:
+      enabled: true
+      # Unicode / invisible text defense — see docs/Linter.md § Unicode
+      # No allowlist needed: banner art is build-generated with escaped
+      # string literals (no raw control bytes in source).
+      detect_bidi: true
+      detect_zero_width: true
+      detect_control_ascii: true

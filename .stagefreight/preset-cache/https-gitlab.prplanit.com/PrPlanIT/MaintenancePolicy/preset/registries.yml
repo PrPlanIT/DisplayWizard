@@ -1,0 +1,19 @@
+# Registry surfaces. default_path is an identity template — {org.<alias>} + {repo}
+# resolve at each repo's own load (normalization) from its orgs:/metadata: blocks, so
+# ONE preset serves every governed repo with zero per-repo vars.
+registries:
+  dockerhub:
+    provider: docker
+    url: docker.io
+    credentials: DOCKER
+    default_path: "{org.docker}/{repo}"
+  harbor:
+    provider: harbor
+    url: cr.pcfae.com
+    credentials: HARBOR
+    default_path: "{org.docker}/{repo}"
+  ghcr:
+    provider: ghcr
+    url: ghcr.io
+    credentials: GHCR
+    default_path: "{org.ghcr}/{repo}"

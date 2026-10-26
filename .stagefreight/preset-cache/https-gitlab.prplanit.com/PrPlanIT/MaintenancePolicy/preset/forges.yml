@@ -1,0 +1,14 @@
+forges:
+  # default_path lets {path.<forge>} derive per repo: {org} is the repo's org
+  # (metadata.org, = the gitlab group for these repos), {org.github} the github org
+  # alias, {repo} the slug. The shared badge stencils resolve their links from these.
+  gitlab:
+    provider: gitlab
+    url: "https://gitlab.prplanit.com"
+    credentials: GITLAB
+    default_path: "{org}/{repo}"
+  github:
+    provider: github
+    url: "https://github.com"
+    credentials: GITHUB
+    default_path: "{org.github}/{repo}"
