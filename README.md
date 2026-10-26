@@ -12,7 +12,7 @@ Manages a virtual display driver on Windows: installs, removes and reloads the d
 > [!WARNING]
 > **This is the Go port, in development and not close to GA: only its UI is functional.** The working version is v0.6.x, written in AutoHotkey, on the [`v0.6.x-autohotkey`](https://gitlab.prplanit.com/PrPlanIT/DisplayWizard/-/tree/v0.6.x-autohotkey) branch — [download it from Releases](https://github.com/PrPlanIT/DisplayWizard/releases). There is no ETA for the Go port.
 
-<img src="docs/screenshots/PPIT-IddSample_Wiz-SS_GUI_Advanced.png" height="400" />
+<img src="docs/screenshots/DisplayWizard-GUI.png" height="400" alt="Display Wizard" />
 
 ### Features:
 
