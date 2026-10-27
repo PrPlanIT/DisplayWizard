@@ -79,6 +79,7 @@ perform:
     - stagefreight ci run perform
   artifacts:
     paths: [.stagefreight/]
+    when: always
     expire_in: 1 day
   resource_group: perform
 
