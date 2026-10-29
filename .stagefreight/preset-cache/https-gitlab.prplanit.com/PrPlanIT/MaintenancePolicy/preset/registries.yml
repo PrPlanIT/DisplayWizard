@@ -17,3 +17,10 @@ registries:
     url: ghcr.io
     credentials: GHCR
     default_path: "{org.ghcr}/{repo}"
+  # Harbor pull-through proxy for ghcr.io. Used by dependency discovery (dependency.registry)
+  # to list a ghcr-based image's tags through Harbor with the existing Harbor credentials,
+  # rather than authenticating to ghcr.io directly. OCI provider → distribution-API listing.
+  ghcr-proxy:
+    provider: harbor
+    url: ghcr.cr.pcfae.com
+    credentials: HARBOR
