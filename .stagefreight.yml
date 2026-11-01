@@ -38,29 +38,29 @@ builds:
     platforms:
       - windows/amd64
 scribe:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/scribe-go.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/scribe-go.yml
 lint:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/lint-flagships.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/lint-flagships.yml
 security:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/security.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/security.yml
 dependency:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/dependency.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/dependency.yml
 commit:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/commit.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/commit.yml
 release:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/release.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/release.yml
 manifest:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/manifest.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/manifest.yml
 build_cache:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/build_cache.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/build_cache.yml
 ci:
   forge:
     - gitlab
   image: docker.cr.pcfae.com/prplanit/stagefreight:latest-dev
 forges:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/forges.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/forges.yml
 git:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/git.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/git.yml
   tags:
     original:
       pattern: ^(beta|proto)_v\d+\.\d+$
@@ -112,9 +112,9 @@ publish:
       events:
         - push
         - manual
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/publish-binary.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/publish-binary.yml
 registries:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
 repos:
   github-mirror:
     branches:
@@ -146,12 +146,12 @@ repos:
     worktree: .
 stencils:
   presets:
-    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-base.yml
-    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-status.yml
-    - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/stencils-go.yml
+    - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/stencils-base.yml
+    - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/stencils-status.yml
+    - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/stencils-go.yml
 toolchains:
-  preset: https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/toolchains.yml
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/toolchains.yml
   want:
     presets:
-      - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/toolchains-scanners.yml
-      - https://gitlab.prplanit.com/PrPlanIT/MaintenancePolicy//preset/toolchains-go.yml
+      - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/toolchains-scanners.yml
+      - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/toolchains-go.yml

@@ -4,7 +4,7 @@ forges:
   # alias, {repo} the slug. The shared badge stencils resolve their links from these.
   gitlab:
     provider: gitlab
-    url: "https://gitlab.prplanit.com"
+    url: "https://git.optcp.com"
     credentials: GITLAB
     default_path: "{org}/{repo}"
   github:

@@ -3,7 +3,7 @@
 # {metadata.license}, {stagefreight.version}. Compose with a status set (stencils-status
 # for build/release repos, stencils-pipeline for CI-only repos) + optional go/docker.
 stencils:
-  repo-gl:      { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://gitlab.prplanit.com/{path.gitlab}" }
+  repo-gl:      { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://git.optcp.com/{path.gitlab}" }
   repo-gh:      { render: shield, label: GitHub, message: mirror, color: "#181717", logo: github, link: "https://github.com/{path.github}" }
   license:      { label: license, message: "{metadata.license}", color: "#310937", font: monofur, link: LICENSE }
   issues:       { type: github-issues-open }
