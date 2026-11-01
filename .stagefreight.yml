@@ -67,7 +67,7 @@ builds:
 forges:
   gitlab:
     provider: gitlab
-    url: "https://gitlab.prplanit.com"
+    url: "https://git.optcp.com"
     credentials: GITLAB
 
   github:
@@ -224,7 +224,7 @@ toolchains:
 # No docker/pulls stencils — DisplayWizard ships a Windows installer, not an image.
 stencils:
   # ── generated badges ──
-  build:   { label: build,   message: "{env:BUILD_STATUS}", color: auto, font: monofur, link: "https://gitlab.prplanit.com/{var:gitlab_group}/{var:repo}/-/pipelines" }
+  build:   { label: build,   message: "{env:BUILD_STATUS}", color: auto, font: monofur, link: "https://git.optcp.com/{var:gitlab_group}/{var:repo}/-/pipelines" }
   license: { label: license, message: "AGPL-3.0-only", color: "#310937", font: monofur, link: LICENSE }
   release: { label: release, message: "v{base}", color: "#74ecbe", font: dejavu-sans, font_size: 11, link: "https://github.com/{var:github_org}/{var:github_repo}/releases" }
   updated: { label: updated, message: "{env:BUILD_DATE}", color: "#236144", font: dejavu-sans, font_size: 11 }
@@ -233,7 +233,7 @@ stencils:
   donate:  { render: shield, message: donate,  color: "#FF5E5B", logo: ko-fi,          logo_color: white, link: "https://ko-fi.com/T6T41IT163" }
   sponsor: { render: shield, message: sponsor, color: "#EA4AAA", logo: githubsponsors, logo_color: white, link: "https://github.com/sponsors/{var:github_org}" }
   github:  { render: shield, label: GitHub, message: source, color: "#181717", logo: github, link: "https://github.com/{var:github_org}/{var:github_repo}" }
-  gitlab:  { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://gitlab.prplanit.com/{var:gitlab_group}/{var:repo}" }
+  gitlab:  { render: shield, label: GitLab, message: source, color: "#FC6D26", logo: gitlab, link: "https://git.optcp.com/{var:gitlab_group}/{var:repo}" }
 
   # ── named producers (repo resolves from repos: publish-origin) ──
   go-report:    { type: goreportcard }
