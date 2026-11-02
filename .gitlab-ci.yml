@@ -42,7 +42,7 @@ workflow:
   - export SF_CI_PIPELINE_ID="${CI_PIPELINE_ID}"
 
 default:
-  image: docker.cr.pcfae.com/prplanit/stagefreight:latest-dev
+  image: docker.cr.optcp.com/prplanit/stagefreight:latest-dev
   interruptible: true
 
 audition:

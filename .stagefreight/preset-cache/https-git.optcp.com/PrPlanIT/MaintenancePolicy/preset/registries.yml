@@ -9,7 +9,7 @@ registries:
     default_path: "{org.docker}/{repo}"
   harbor:
     provider: harbor
-    url: cr.pcfae.com
+    url: cr.optcp.com
     credentials: HARBOR
     default_path: "{org.docker}/{repo}"
   ghcr:
@@ -22,5 +22,5 @@ registries:
   # rather than authenticating to ghcr.io directly. OCI provider → distribution-API listing.
   ghcr-proxy:
     provider: harbor
-    url: ghcr.cr.pcfae.com
+    url: ghcr.cr.optcp.com
     credentials: HARBOR
