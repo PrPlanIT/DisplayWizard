@@ -10,7 +10,7 @@
     },
     {
       "name": "govulncheck",
-      "resolved": "1.1.4"
+      "resolved": "1.9.0"
     },
     {
       "name": "grype",
