@@ -11,7 +11,7 @@ git:
       default:
         base_from:
         - stable
-        format: '{base}-dev+{sha}'
+        format: '{next}-dev.{commits}+{sha}'
     no_lineage:
       mode: explicit
       version: 0.0.0-dev+{sha}
