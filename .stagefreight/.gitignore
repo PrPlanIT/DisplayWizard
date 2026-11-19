@@ -8,3 +8,4 @@
 !/inventory/
 !/toolchains.lock
 !/upstream.lock
+!/overrides.lock
