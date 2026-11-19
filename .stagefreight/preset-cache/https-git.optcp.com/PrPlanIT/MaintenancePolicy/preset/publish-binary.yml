@@ -1,8 +1,6 @@
 # publish — binary-only bucket. Same release lifecycle as publish-docker-binary.yml with
 # every registry target removed: a repo here ships archives, not an image. Kept as its
-# own file rather than a per-repo override because "no registry" is a policy, and a
-# config: override replaces a whole section, so subtracting targets that way would mean
-# restating the ones that remain in every repo that does it.
+# own file rather than a per-repo override because "no registry" is a policy.
 publish:
   # The dev channel: a rolling archive that the dev-release points at, so `latest-dev`
   # always resolves to the current main build.

@@ -69,7 +69,7 @@ metadata:
   description:
     - Windows desktop app for managing virtual displays.
     - Desktop utility for creating and arranging virtual displays on Windows, packaged as an Electron app over a Go core.
-  license: MIT
+  license: AGPL-3.0-only
   org: PrPlanIT
   title: Display Wizard
   topics:
@@ -87,13 +87,6 @@ orgs:
     maintainer: PrPlanIT <precisionplanit@gmail.com>
 publish:
   binaries:
-    build: bin
-    checksums: true
-    format: auto
-    include:
-      - README.md
-      - LICENSE
-    kind: binary-archive
     name: VDisplay-Wizard-{version}-{os}-{arch}
     when:
       events:
@@ -101,17 +94,7 @@ publish:
       git_tags:
         - stable
   binaries-dev:
-    build: bin
-    checksums: true
-    format: auto
-    kind: binary-archive
     name: VDisplay-Wizard-latest-dev-{os}-{arch}
-    when:
-      branches:
-        - main
-      events:
-        - push
-        - manual
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/publish-binary.yml
 registries:
   preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/registries.yml
