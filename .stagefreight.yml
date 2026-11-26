@@ -127,6 +127,12 @@ repos:
     roles:
       - primary
     worktree: .
+secrets:
+  providers:
+    openbao:
+      kind: vault
+signing:
+  preset: https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/signing.yml
 stencils:
   presets:
     - https://git.optcp.com/PrPlanIT/MaintenancePolicy//preset/stencils-base.yml

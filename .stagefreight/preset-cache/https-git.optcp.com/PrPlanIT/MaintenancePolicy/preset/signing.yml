@@ -1,0 +1,18 @@
+# Key, role and address bind per group at runtime (SF_KMS_TENANT, SF_SECRETS_OPENBAO_*).
+signing:
+  profiles:
+    release:
+      requires: [kms]
+      kms: { ref: tenant, provider: openbao, role: cosign }
+      non_exportable: required
+      attestation: true
+      enforce: true
+      transparency_log: true
+    # Never blocks: a signing outage must not stop a dev image.
+    dev:
+      requires: [kms]
+      kms: { ref: tenant, provider: openbao, role: cosign }
+      non_exportable: required
+      attestation: true
+      transparency_log: true
+  default_profile: dev
