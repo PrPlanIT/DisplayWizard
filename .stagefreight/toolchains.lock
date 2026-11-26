@@ -10,13 +10,13 @@
     },
     {
       "name": "govulncheck",
-      "resolved": "1.9.0"
+      "resolved": "1.10.0"
     },
     {
       "name": "grype",
-      "resolved": "0.121.3",
+      "resolved": "0.122.1",
       "sha256": {
-        "linux/amd64": "e9da18cc1429e786722e32161288103600efffd8e483c90761f90485bd1bec85"
+        "linux/amd64": "f1ba7e2917ee1395618de20a98da0aa7c0fb1788927797651047c50502a37538"
       }
     },
     {
@@ -28,9 +28,9 @@
     },
     {
       "name": "syft",
-      "resolved": "1.57.1",
+      "resolved": "1.57.2",
       "sha256": {
-        "linux/amd64": "bf52519eb57f675d47c07d43213cb6dff6449f3d6d1147ff6701ed91f44eef0c"
+        "linux/amd64": "ad92bd3ec1b94a3df01d4d0aec199afa9c42b72e86da436ff5f837914d32706b"
       }
     },
     {
